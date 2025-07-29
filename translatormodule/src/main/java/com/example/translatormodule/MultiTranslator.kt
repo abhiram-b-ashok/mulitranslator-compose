@@ -1,6 +1,5 @@
 package com.example.translatormodule
 
-
 import android.content.Context
 import android.util.Log
 import com.google.mlkit.nl.translate.*
@@ -26,7 +25,6 @@ data class TranslationResult(
     val selectedLanguages: List<String>,
     val translations: Map<String, String>
 )
-
 
 class Translator(private val context: Context) {
 
@@ -62,6 +60,7 @@ class Translator(private val context: Context) {
             if (translated.isNotBlank() && translated != "Error") {
                 hasResult = true
             }
+
             resultMap[lang] = translated
         }
 
